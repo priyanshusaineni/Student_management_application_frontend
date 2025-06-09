@@ -7,11 +7,11 @@ networks:
 services:
   mongodb:
     image: mongodb/mongodb-community-server
-    contianer_name: student_db
+    container_name: student_db
     ports:
       - "27017:27017"
     networks:
-      app_network
+      - app_network
 
   backend:
     build:
@@ -21,7 +21,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL=mongodb://13.233.7.184:27017/
+      - DATABASE_URL=mongodb://mongodb:27017/
     depends_on:
       - mongodb
     networks:
