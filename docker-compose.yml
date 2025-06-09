@@ -14,10 +14,8 @@ services:
       - app_network
 
   backend:
-    build:
-      context: ../backend
-      dockerfile: Dockerfile
-    container_name: student-backend
+    image: priyanshu0811/backend
+    #container_name: student-backend
     ports:
       - "3000:3000"
     environment:
@@ -27,10 +25,9 @@ services:
     networks:
       - app_network
   frontend:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: student-frontend
+    image: priyanshu0811/frontend
+
+    #container_name: student-frontend
     ports:
       - "5173:5173"
     depends_on:
