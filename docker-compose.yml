@@ -1,0 +1,40 @@
+version: '3.8'
+
+networks:
+  app_network:
+    name: app_network
+
+services:
+  mongodb:
+    image: mongodb/mongodb-community-server
+    contianer_name: student_db
+    ports:
+      - "27017:27017"
+    networks:
+      app_network
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: student-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=mongodb://13.233.7.184:27017/
+    depends_on:
+      - mongodb
+    networks:
+      - app_network
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: student-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - app_network
+
