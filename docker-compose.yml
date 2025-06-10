@@ -13,7 +13,7 @@ services:
     ports:
       - "27017:27017"
     networks:
-      - app_network
+      - app_network 
 
   backend:
     image: priyanshu0811/backend
