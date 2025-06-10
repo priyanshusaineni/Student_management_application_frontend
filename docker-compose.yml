@@ -6,10 +6,10 @@ networks:
 
 services:
   mongodb:
-    image: mongodb/mongodb-community-server
+    image: mongo
     container_name: student_db
     volumes:
-      - mongodb_data:/data/db
+      - ./mongodb_data:/data/db
     user: "999"
     ports:
       - "27017:27017"
