@@ -8,9 +8,6 @@ services:
   mongodb:
     image: mongo
     container_name: student_db
-    volumes:
-      - ./mongodb_data:/data/db
-    user: "999"
     ports:
       - "27017:27017"
     networks:
@@ -37,6 +34,3 @@ services:
       - backend
     networks:
       - app_network
-
-volumes:
-  mongodb_data:
