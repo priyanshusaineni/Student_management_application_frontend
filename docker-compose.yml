@@ -9,7 +9,7 @@ services:
     image: mongodb/mongodb-community-server
     container_name: student_db
     volumes:
-      - ./mongodb_data:/data/db
+      - mongodb_data:/data/db
     user: "999"
     ports:
       - "27017:27017"
