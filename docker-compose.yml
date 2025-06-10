@@ -9,7 +9,7 @@ services:
     image: mongo
     container_name: student_db
     volumes:
-      - /tmp/mongodb_data:/data/db
+      - ~/mongodb_data:/data/db
     ports:
       - "27017:27017"
     networks:
