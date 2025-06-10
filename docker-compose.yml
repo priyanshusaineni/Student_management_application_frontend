@@ -31,7 +31,7 @@ services:
 
     #container_name: student-frontend
     environment:
-      - BUILD_URL=http://13.233.70.184:3000/student
+      - BUILD_URL_ENV=http://13.233.70.184:3000/student
     ports:
       - "5173:5173"
     depends_on:

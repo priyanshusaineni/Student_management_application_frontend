@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL=process.env.BASE_URL;
+const BASE_URL=`${process.env.BUILD_URL_ENV}`;
 
 export const getAllStudents=()=>axios.get(BASE_URL)
 
