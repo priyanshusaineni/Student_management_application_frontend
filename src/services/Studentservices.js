@@ -1,5 +1,5 @@
 import axios from 'axios';
-const BASE_URL='http://13.233.70.184:3000/student';
+const BASE_URL=process.env.BASE_URL;
 
 export const getAllStudents=()=>axios.get(BASE_URL)
 
