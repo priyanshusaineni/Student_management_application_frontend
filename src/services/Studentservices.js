@@ -1,6 +1,4 @@
 import axios from 'axios';
-import dotenv from 'dotenv'
-dotenv.config()
 // const BASE_URL=`${process.env.BUILD_URL_ENV}`
 const BASE_URL= "http://13.233.70.184:3000/student"
 
