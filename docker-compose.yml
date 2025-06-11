@@ -12,6 +12,8 @@ services:
       - ~/mongodb_data:/data/db
     ports:
       - "27017:27017"
+    environment:
+      - VITE_BASE_URL=http://backend:3000/student
     networks:
       - app_network 
 
