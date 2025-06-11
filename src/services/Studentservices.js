@@ -13,4 +13,4 @@ export const updateStudent=(id,student)=> {
 
 export const postStudent=(student)=>{return axios.post(BASE_URL,student)}
 
-//updated
+//updated 
