@@ -1,6 +1,6 @@
 import axios from 'axios';
 // const BASE_URL=`${process.env.BUILD_URL_ENV}`
-const BASE_URL= "http://13.233.139.102:3000/student"
+const BASE_URL= "http://13.233.66.47:3000/student"
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 export const getAllStudents=()=>axios.get(BASE_URL)
 
