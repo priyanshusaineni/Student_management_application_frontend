@@ -18,7 +18,7 @@ services:
       - app_network 
 
   backend:
-    image: priyanshu0811/backend
+    image: 600802700666.dkr.ecr.ap-south-1.amazonaws.com/usecase0/backend
     #container_name: student-backend
     ports:
       - "3000:3000"
@@ -29,7 +29,7 @@ services:
     networks:
       - app_network
   frontend:
-    image: priyanshu0811/frontend
+    image: 600802700666.dkr.ecr.ap-south-1.amazonaws.com/usecase0/frontend
 
     #container_name: student-frontend
     environment:
